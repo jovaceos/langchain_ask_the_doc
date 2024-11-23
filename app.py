@@ -34,7 +34,7 @@ query_text = st.text_input('Enter your question:', placeholder = 'Please provide
 # Form input and query
 result = []
 with st.form('myform', clear_on_submit=True):
-    openai_api_key = st.text_input('OpenAI API Key', type='password', disabled=not (uploaded_file and query_text))
+    openai_api_key = st.text_input('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', type='password', disabled=not (uploaded_file and query_text)) #Acá se deja la clave de OpenAI 
     submitted = st.form_submit_button('Submit', disabled=not(uploaded_file and query_text))
     if submitted and openai_api_key.startswith('sk-'):
         with st.spinner('Calculating...'):
